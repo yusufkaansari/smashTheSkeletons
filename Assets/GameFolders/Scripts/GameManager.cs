@@ -35,13 +35,10 @@ public class GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (SceneManager.GetActiveScene().name == "Game")
-        {        
-            Timer();
-            DisplayTime(passingTime);
-            DisplayKilled();
-        }
+    {  
+        Timer();
+        DisplayTime(passingTime);
+        DisplayKilled();
     }
     public void LoadScene(string scene)
     {
