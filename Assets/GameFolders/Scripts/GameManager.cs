@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI killedText, timeCountText;
 
-    float floatTime;
+    float passingTime;
 
     int killEnemyNumber=0;
     // Start is called before the first frame update
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Game")
         {        
             Timer();
-            DisplayTime(floatTime);
+            DisplayTime(passingTime);
             DisplayKilled();
         }
     }
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     }
     void Timer()
     {        
-        floatTime += Time.deltaTime;
+        passingTime += Time.deltaTime;
     }
     void DisplayTime(float timeToDisplay)
     {

@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
 
     bool isDead=false;
 
-    GameObject behindWall;
+    GameObject behindWall;    
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +38,11 @@ public class EnemyController : MonoBehaviour
                 DeadEnemy();
                 GameManager.Instance.UpdateKillEnemyNumber();
         }
+    }
+    private void OnBecameInvisible()
+    {
+        Debug.Log("onbecameýnvisible is running.");
+
     }
     void MoveForward()
     {
